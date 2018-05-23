@@ -1,0 +1,62 @@
+html body {
+  height: 100vh;
+}
+
+body {
+background: #fafafafa;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: .8;
+}
+
+#drum-machine {
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  width: 600px;
+  background: ;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#display {
+  height: 100%;
+  width: 40%;
+  background-color: black;
+  color: tomato;
+  display: flex;
+  justify-content: center;
+}
+
+#displayText{
+  margin-top: 10px;
+}
+
+#pads{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #ABABAB;
+  padding: 10px;
+}
+
+.pad {
+  width: 30%;
+  background: #3D3D3D;
+  margin: 5px;
+  border-radius: 2px;
+  box-shadow: 3px 3px 3px;
+  border: 1px #3D3D3D solid;
+
+}
+
+.pad:hover{
+  box-shadow: none;
+  border: 1px black solid;
+}
