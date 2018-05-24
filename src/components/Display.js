@@ -1,4 +1,5 @@
 import React from "react";
+import Instrument from "./Instrument";
 
 class Display extends React.Component {
   
@@ -8,8 +9,14 @@ class Display extends React.Component {
         className="display"
         id="display"
       >
-        <div id="displayText">
-          Drum Machine
+        <div id="title">
+          Drum Machine 
+        </div>
+        <div id="details">
+          {this.props.details}
+          <Instrument
+            instrument={this.props.instrument}
+          />
         </div>
       </div>  
     )

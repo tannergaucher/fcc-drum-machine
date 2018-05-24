@@ -11,9 +11,22 @@ class App extends Component {
       key: ""
     }
     
+   this.handleK = this.handleK.bind(this);
   }
   
-  render() {
+  handleClick = (e) =>{
+    let key = e.target.id;
+    this.setState({key})
+  }
+  
+  handleK = (e) => {
+    console.log(e.key)
+    this.setState({key: e.key})
+  }
+
+    render() {
+    
+    document.addEventListener('keydown', this.handleK)
     
     return (
       <div 
@@ -22,9 +35,11 @@ class App extends Component {
         <div id="drum-machine">
           <Pads
             handleClick={this.handleClick}
-
           />
-          <Display/>
+          <Display
+            instrument={this.state.key}
+            resetState={this.resetState}
+          />
         </div>
       </div>
     );

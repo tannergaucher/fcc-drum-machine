@@ -3,7 +3,7 @@ html body {
 }
 
 body {
-background: #fafafafa;
+  background: #fafafafa;
 }
 
 .App {
@@ -19,22 +19,29 @@ background: #fafafafa;
   justify-content: center;
   height: 300px;
   width: 600px;
-  background: ;
+  background: black;
   padding: 10px;
   border-radius: 5px;
+  /* box-shadow: 3px 3px 30px rgba(0, 0, 0, .3); */
 }
 
 #display {
   height: 100%;
   width: 40%;
-  background-color: black;
+  background-color: #191919;
   color: tomato;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-#displayText{
-  margin-top: 10px;
+#title{
+  padding-top: 20px;
+}
+
+#details{
+  padding-top: 10px;
 }
 
 #pads{
