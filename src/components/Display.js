@@ -13,9 +13,8 @@ class Display extends React.Component {
           Drum Machine 
         </div>
         <div id="details">
-          {this.props.details}
           <Instrument
-            instrument={this.props.instrument}
+            keyPress={this.props.keyPress}
           />
         </div>
       </div>  

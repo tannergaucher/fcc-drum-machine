@@ -5,29 +5,23 @@ import Display from "./components/Display";
 
 class App extends Component {
   
-  constructor() {
+  constructor(){
     super();
+    
     this.state = {
-      key: ""
+      key: []
     }
-    
-   this.handleK = this.handleK.bind(this);
   }
   
-  handleClick = (e) =>{
-    let key = e.target.id;
-    this.setState({key})
+  handleClick = (e) => {
+    if (e.target.className === "pad") {
+      console.log(e.target.id);
+      this.setState({key: [...this.state.key, e.target.id]})
+    }
   }
   
-  handleK = (e) => {
-    console.log(e.key)
-    this.setState({key: e.key})
-  }
-
-    render() {
-    
-    document.addEventListener('keydown', this.handleK)
-    
+  render() {
+        
     return (
       <div 
         className="App"
@@ -37,8 +31,7 @@ class App extends Component {
             handleClick={this.handleClick}
           />
           <Display
-            instrument={this.state.key}
-            resetState={this.resetState}
+            keyPress={this.state.key}
           />
         </div>
       </div>

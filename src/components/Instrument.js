@@ -1,100 +1,42 @@
 import React from "react";
 
 class Instrument extends React.Component { 
-  
-
-  
+    
   render(){
-
-  let instrument = this.props.instrument;
-  
-    if(instrument === "q"){
-      return ( 
-        <div>   
-          <div>Kick</div>  
-          <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" autoPlay></audio>
-        </div>  
-      )
-    } 
     
-    if(instrument === "a"){
-      return ( 
-        <div>   
-          <div>Open HH</div>  
-          <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" autoPlay></audio>
-        </div>  
-      )
-    } 
+    const instruments = [
+      { instrument: "kick", key: "q", clip: "https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"},
+      { instrument: "openHH", key: "a", clip: "https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3"},
+      { instrument: "closedHH", key: "z", clip: "https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3"},
+      { instrument: "kickHat", key: "w", clip: "https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3"},
+      { instrument: "pad1", key: "s", clip: "https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3"},
+      { instrument: "pad2", key: "x", clip: "https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"},
+      { instrument: "pad3", key: "e", clip: "https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"},
+      { instrument: "snare", key: "d", clip: "https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"},
+      { instrument: "clap", key: "c", clip: "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"}
+    ];
     
-    if(instrument === "z"){
-      return (
-        <div>   
-          <div>Open HH</div>  
-          <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3" autoPlay></audio>
-        </div>  
-      )
-    } 
+    //match to key instead of target.id
     
-    if(instrument === "w"){
-      return ( 
-        <div>   
-          <div>Kick Hat</div>  
-          <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3" autoPlay></audio>
-        </div>  
-      )
-    } 
+    function getClip(e) {
+      const match = instruments.filter(instrument => instrument.key === e.target.id);
+      
+      if(e.target.className === "pad") {
+        
+        console.log(match);
+        console.log(match[0].instrument);
+        console.log(match[0].clip);
+        // return match[0].clip;
+        // return (<div>{match[0].instrument}</div>)
+        
+      }
+    }
     
-    if(instrument === "s"){
-      return ( 
-        <div>   
-          <div>Pad 1</div>  
-          <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3" autoPlay></audio>
-        </div>  
-      )
-    } 
-    
-    if(instrument === "x"){
-      return ( 
-        <div>   
-          <div>Pad 2</div>  
-          <audio src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3" autoPlay></audio>
-        </div>  
-      )
-    } 
-    
-    if(instrument === "e"){
-      return ( 
-        <div>   
-          <div>Pad 3</div>  
-          <audio src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3" autoPlay></audio>
-        </div>  
-      )
-    } 
-    
-    if(instrument === "d"){
-      return ( 
-        <div>   
-          <div>Snare</div>  
-          <audio src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3" autoPlay></audio>
-        </div>  
-      )
-    } 
-    
-    if(instrument === "c"){
-      return ( 
-        <div>   
-          <div>Clap</div>  
-          <audio src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3" autoPlay></audio>
-        </div>  
-      )
-    } 
-
-    return(
-      <div>
-
-      </div>
+    return ( 
+      <div>   
+        <div>test</div>  
+      </div>  
     )
-  
   }
 }
 
