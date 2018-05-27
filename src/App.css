@@ -52,17 +52,16 @@ body {
   padding: 10px;
 }
 
-.pad {
+.drum-pad {
   width: 30%;
   background: #3D3D3D;
   margin: 5px;
   border-radius: 2px;
   box-shadow: 3px 3px 3px;
   border: 1px #3D3D3D solid;
-
 }
 
-.pad:hover{
+.drum-pad:hover{
   box-shadow: none;
   border: 1px black solid;
 }

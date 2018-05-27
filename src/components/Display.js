@@ -1,5 +1,4 @@
 import React from "react";
-import Instrument from "./Instrument";
 
 class Display extends React.Component {
   
@@ -13,9 +12,6 @@ class Display extends React.Component {
           Drum Machine 
         </div>
         <div id="details">
-          <Instrument
-            keyPress={this.props.keyPress}
-          />
         </div>
       </div>  
     )
